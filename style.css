@@ -81,6 +81,32 @@ section {
   line-height: 1;
 }
 
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
+.link__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
+}
 
 
 /* 
@@ -244,7 +270,6 @@ PROJECTS
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
-  transition: all 450ms ease;
 }
 
 .project__wrapper:hover .project__description{
