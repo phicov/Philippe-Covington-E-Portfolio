@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <script src="https://kit.fontawesome.com/8925cc1b40.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function(){
+      emailjs.init("QiS7h_2E4oYTOVOzv");
+  })();
+</script>
 </head>
 <body>
   <section id="landing-page">
@@ -74,6 +82,67 @@
     <a href="#projects" class="scroll">
       <div class="scroll__icon click"></div>
     </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">
+          About Me.
+        </h3>
+        <h4 class="modal__sub-title modal__sub-title--about blue-purple-gradient">Frontend Software Engineer</h4>
+        <p class="modal__para">
+          I'm a 20 year-old Software Engineer who loves creating <b class="orange-gradient"> unique, interactive websites </b>that users love. I'm always expanding my skills and love developing <b class="orange-gradient"> incredible user experiences! </b> <br class="modal__para--br">
+          I currently work on personal projects, 
+          but am always looking to <b class="orange-gradient"> 
+          expand</b> and <b class="orange-gradient">innovate.</b> 
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img src="./assets/html.svg" class="modal__language--img" alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img src="./assets/css.svg" class="modal__language--img" alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img src="./assets/javascript.svg" class="modal__language--img" alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img src="./assets/react.svg" class="modal__language--img" alt="">
+            <span class="language__name">React</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <h3 class="modal__title modal__title--contact">
+          Let's Have a Chat!
+        </h3>
+        <h3 class="modal__sub-title modal__title--contact">
+          I would love to hear from you!
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item"> <label class="form__item--label">Name</label>
+            <input type="text" name="user_name" class="input" required></input>
+          </div>
+          <div class="form__item"> <label class="form__item--label">Email</label>
+            <input type="email" name="user_email" class="input" required></input>
+          </div>
+          <div class="form__item"> <label class="form__item--label">Message</label>
+            <textarea type="text" name="message" class="input" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Contact Me
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Success
+        </div>
+        <i class="fa-solid fa-xmark modal__exit click"></i>
+      </div>
+    </div>
   </section>
   <section id="projects">
     <div class="container">
