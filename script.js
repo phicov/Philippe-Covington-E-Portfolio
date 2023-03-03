@@ -1,5 +1,23 @@
 let isModalOpen = false;
 let contrastToggle = false;
+const scaleFactor = 1 / 20;
+const rotateFactor = 1 / 3
+
+function moveBackground(event) {
+  const shapes = document.querySelectorAll('.shape')
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+  const deg = event.clientX * rotateFactor
+
+
+
+  for (let i = 0; i < shapes.length; i++) {
+    const isOdd = i % 2 !== 0;
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt }px) rotate(${deg}deg)`
+  
+  }
+}
 
 function toggleContrast() {
   contrastToggle = !contrastToggle;

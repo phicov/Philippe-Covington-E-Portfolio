@@ -18,13 +18,13 @@
 </script>
 </head>
 <body>
-  <section id="landing-page">
+  <section id="landing-page" onmousemove="moveBackground(event)">
     <nav>
       <figure>
         <img id="personal-logo" src="./assets/logo.svg" alt="">
       </figure>
       <ul class="nav__link--list">
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
           nav__link--anchor link__hover-effect
           link__hover-effect--black">
@@ -32,7 +32,7 @@
           </a>
         </li>
         <li class="nav__link">
-          <a href="#" class="
+          <a href="#projects" class="
           nav__link--anchor link__hover-effect
           link__hover-effect--black">
             Projects
@@ -76,9 +76,11 @@
         </div>
       </div>
     </header>
-    <button class="mail__btn click" onclick="toggleModal()">
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
       <i class="fas fa-envelope" aria-hidden="true"></i>
     </button>
+  </a>
     <a href="#projects" class="scroll">
       <div class="scroll__icon click"></div>
     </a>
@@ -143,15 +145,17 @@
         <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
       </div>
     </div>
-  <img src="./assets/4 point star.svg" class="shape shape--0">
-  <img src="./assets/5 point star.svg" class="shape shape--1">
-  <img src="./assets/comet.svg" class="shape shape--2">
+  
+  <img src="./assets/5 point star.svg" class="shape shape--0">
+  <img src="./assets/comet.svg" class="shape shape--1">
+  <img src="./assets/4 point star.svg" class="shape shape--2">
   <img src="./assets/4 point star.svg" class="shape shape--3">
-  <img src="./assets/5 point star.svg" class="shape shape--4">
-  <img src="./assets/planet.svg" class="shape shape--5">
-  <img src="./assets/4 point star.svg" class="shape shape--6">
-  <img src="./assets/comet.svg" class="shape shape--7">
+  <img src="./assets/planet.svg" class="shape shape--4">
+  <img src="./assets/space ship.svg" class="shape shape--5">
+  <img src="./assets/comet.svg" class="shape shape--6">
+  <img src="./assets/5 point star.svg" class="shape shape--7">
   <img src="./assets/space invader.svg" class="shape shape--8">
+
   </section>
   <section id="projects">
     <div class="container">
@@ -214,7 +218,7 @@
         footer__social--link
         link__hover-effect
         link__hover-effect--white
-        ">
+        " onclick="toggleModal()">
         Contact
       </a>
         <a href="#" class="
