@@ -38,7 +38,7 @@
             Projects
           </a>
         </li>
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
           nav__link--anchor link__hover-effect
           link__hover-effect--black">
@@ -61,7 +61,7 @@
         <p class="header__para">
           I'm a <b class="blue-purple-gradient">Frontend Software Engineer</b> with an outerversal passion for learning and creating web applications with incredible user experiences.
           <br>
-          Here's a bit more <b class="orange-gradient">about me.</b>
+          Here's a bit more <b class="orange-gradient click" onclick="toggleModal()">about me.</b>
         </p>
         <div class="social__list">
           <a href="https://www.linkedin.com/in/philippecovington/" target="_blank" class="social__link click">
@@ -76,7 +76,7 @@
         </div>
       </div>
     </header>
-    <button class="mail__btn click">
+    <button class="mail__btn click" onclick="toggleModal()">
       <i class="fas fa-envelope" aria-hidden="true"></i>
     </button>
     <a href="#projects" class="scroll">
@@ -140,7 +140,7 @@
         <div class="modal__overlay modal__overlay--success">
           Thank you for the message! I'll get back to you as soon as I can! :)
         </div>
-        <i class="fa-solid fa-xmark modal__exit click"></i>
+        <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
       </div>
     </div>
   </section>
